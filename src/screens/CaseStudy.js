@@ -1,4 +1,4 @@
-import React, {useEffect} from "react";
+import React, { useEffect } from "react";
 import Homepage from "../img/homepage.png";
 import PdtDetail from "../img/pdt-detail.png";
 import Offers from "../img/Offers.png";
@@ -19,6 +19,21 @@ import CaseCardText from "../components/CaseCardText";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
+const pageVariants = {
+  startAnimation: {
+    opacity: 0,
+  },
+  endAnimation: {
+    opacity: 1,
+  },
+  exitAnimation: {
+    x: "100vw",
+  },
+  transition: {
+    duration: 0.2,
+  },
+};
+
 const textVariants = {
   startAnimation: {
     y: -30,
@@ -30,9 +45,13 @@ const textVariants = {
   },
 };
 const CaseStudy = () => {
-  
   return (
-    <motion.div initial="startAnimation" animate="endAnimation">
+    <motion.div
+      variants={pageVariants}
+      exit="exitAnimation"
+      initial="startAnimation"
+      animate="endAnimation"
+    >
       <Header
         className="case-nav-color"
         classNameContainerColor="light-green"

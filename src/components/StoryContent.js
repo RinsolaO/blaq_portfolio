@@ -23,6 +23,9 @@ const textVariants2 = {
     y: 0,
     opacity: 1,
   },
+  transition: {
+    staggerChildren: 0.2,
+  },
 };
 
 const imageVariants = {
@@ -99,7 +102,7 @@ const StoryContent = () => {
             </motion.div>
             <motion.div
               variants={textVariants}
-              transition={{ duration: 0.5 }}
+              transition={{ duration: 0.3 }}
               className="more-story-details"
             >
               My journey through design as been quite an amazing one and I have
@@ -127,8 +130,8 @@ const StoryContent = () => {
             <motion.div
               variants={imageVariants}
               transition={{
-                duration: 0.8,
-                delay: 1,
+                duration: 0.3,
+                delay: 0.4,
               }}
               className="more-story-title"
             >
@@ -136,7 +139,7 @@ const StoryContent = () => {
             </motion.div>
             <motion.div
               variants={textVariants}
-              transition={{ duration: 0.5, delay: 1 }}
+              transition={{ duration: 0.3, delay: 0.4 }}
               className="more-story-details"
             >
               What drives me is the idea that I can use my beautiful interface

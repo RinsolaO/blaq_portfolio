@@ -17,7 +17,6 @@ const titleVariants = {
     transition: {
       duration: 0.5,
       type: "spring",
-      delay: 2,
       stiffness: 150,
     },
   },
@@ -33,7 +32,7 @@ const imageVariants = {
     opacity: 1,
     transition: {
       duration: 0.8,
-      delay: 1,
+      delay: 0.6,
     },
   },
 };
@@ -49,7 +48,6 @@ const gridRightVariants = {
     transition: {
       duration: 1.4,
       type: "spring",
-      delay: 2,
       stiffness: 180,
     },
   },
@@ -64,8 +62,8 @@ const BtnVariants = {
     y: 0,
     opacity: 1,
     transition: {
-      duration: 1.4,
-      delay: 3.6,
+      duration: 1,
+      delay: 2,
     },
   },
 };
@@ -80,8 +78,7 @@ const AboutContent = () => {
     if (!inView) {
       animation.start("startAnimation");
     }
-    console.log("this is inview", inView);
-  }, [animation, inView]);
+  }, [inView]);
   return (
     <motion.div
       className="about-container container black"
@@ -119,7 +116,6 @@ const AboutContent = () => {
         </motion.span>
         <motion.img
           variants={gridRightVariants}
-          ref={ref}
           animate={animation}
           src={LeftArrowYellow}
           alt=""
