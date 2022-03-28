@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import Blaq from "../img/Blaq.png";
+import Blaq from "../img/Blaq.webp";
 import DownArrowYellow from "../img/down-arrow-ylw.svg";
 import LeftArrowYellow from "../img/left-arrow-ylw.svg";
 import Btn from "./Btn";

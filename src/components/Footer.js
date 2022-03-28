@@ -86,23 +86,43 @@ const Footer = () => {
             }}
             className="footer-social-media grid"
           >
-            <a href="">
+            <a href="# ">
               <img src={Gmail} alt="" className="footer-img gmail" />
             </a>
 
-            <a href="" target="_blank">
+            <a
+              href="https://twitter.com/lifeofay_"
+              rel="noreferrer"
+              target="_blank"
+            >
               <img src={Twitter} alt="" className="footer-img" />
             </a>
-            <a href="" target="_blank">
+            <a
+              href="https://www.behance.net/adewaleayomikun1"
+              rel="noreferrer"
+              target="_blank"
+            >
               <img src={Behance} alt="" className="footer-img" />
             </a>
-            <a href="" target="_blank">
+            <a
+              href="https://linkedin.com/in/adewale-ayomikun246 "
+              rel="noreferrer"
+              target="_blank"
+            >
               <img src={Linkedin} alt="" className="footer-img" />
             </a>
-            <a href="https://www.instagram.com/lifeofay_/" target="_blank">
+            <a
+              href="https://www.instagram.com/lifeofay_/"
+              rel="noreferrer"
+              target="_blank"
+            >
               <img src={Instagram} alt="" className="footer-img" />
             </a>
-            <a href="" target="_blank">
+            <a
+              href="https://web.facebook.com/aayomikun2?_rdc=1&_rdr"
+              rel="noreferrer"
+              target="_blank"
+            >
               <img src={Facebook} alt="" className="footer-img" />
             </a>
           </motion.div>

@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
 import CarouselMain from "./CarouselMain";
 import Arrow from "../img/right-arrow.svg";
-import Img1 from "../img/sale-img.png";
-import Img2 from "../img/sale-img2.png";
+import Img1 from "../img/sale-img.webp";
+import Img2 from "../img/sale-img2.webp";
 import { useInView } from "react-intersection-observer";
 import { useAnimation } from "framer-motion";
 

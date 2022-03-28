@@ -12,7 +12,7 @@ const pageVariants = {
     opacity: 1,
   },
   exitAnimation: {
-    x: "-100vw",
+    y: "100vh",
   },
   transition: {
     duration: 0.2,

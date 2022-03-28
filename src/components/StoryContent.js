@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import Blaq from "../img/blaq2.png";
+import Blaq from "../img/blaq2.webp";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
@@ -85,12 +85,9 @@ const StoryContent = () => {
             </motion.div>
           </div>
         </div>
-        <div className="more-story">
-          <motion.div
-            className="story-flex-container"
-            ref={ref}
-            animate={animation}
-          >
+
+        <motion.div animate={animation} ref={ref} className="more-story">
+          <motion.div className="story-flex-container">
             <motion.div
               variants={imageVariants}
               transition={{
@@ -123,8 +120,8 @@ const StoryContent = () => {
           {/* DRIVE */}
 
           <motion.div
-            ref={ref}
             animate={animation}
+            ref={ref}
             className="story-flex-container drive"
           >
             <motion.div
@@ -149,7 +146,7 @@ const StoryContent = () => {
               and businesses value.
             </motion.div>
           </motion.div>
-        </div>
+        </motion.div>
       </div>
     </motion.div>
   );

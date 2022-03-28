@@ -36,7 +36,6 @@ const CarouselMain = (props) => {
     if (!inView) {
       animation.start("startAnimation");
     }
-    console.log("this is inview", inView);
   }, [animation, inView]);
   return (
     <motion.div ref={ref} className="carousel" animate={animation}>
