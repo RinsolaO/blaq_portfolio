@@ -3,7 +3,7 @@ import Blaq from "../img/Blaq.webp";
 import DownArrowYellow from "../img/down-arrow-ylw.svg";
 import LeftArrowYellow from "../img/left-arrow-ylw.svg";
 import Btn from "./Btn";
-import { motion, useAnimation } from "framer-motion";
+import { motion, useAnimation, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
 import { useInView } from "react-intersection-observer";
 const titleVariants = {
@@ -80,48 +80,50 @@ const AboutContent = () => {
     }
   }, [inView]);
   return (
-    <motion.div
-      className="about-container container black"
-      initial="startAnimation"
-      animate="endAnimation"
-    >
-      <div className="grid about-grid">
-        <motion.div className=" grid-left" variants={titleVariants}>
-          Adewale <br /> <span>Ayomikun</span>
-        </motion.div>
-
-        <motion.div className=" grid-center" variants={imageVariants}>
-          <img src={Blaq} alt="Blaq" className="blaq-img" />
-        </motion.div>
-
-        <motion.div className=" grid-right" variants={gridRightVariants}>
-          <img src={DownArrowYellow} alt="" />
-          <span className="about-span">
-            I help progressive business create websites and apps that help them
-            bring their idea to life.
-          </span>
-          <motion.div className="about-btn" variants={BtnVariants}>
-            <a href="#footer">
-              <Btn text="Get in touch" className="touch-btn" />
-            </a>
-            <Link to="/Story">
-              <Btn text="My story" className="story-btn" />
-            </Link>
+    <AnimatePresence>
+      <motion.div
+        className="about-container container black"
+        initial="startAnimation"
+        animate="endAnimation"
+      >
+        <div className="grid about-grid">
+          <motion.div className=" grid-left" variants={titleVariants}>
+            Adewale <br /> <span>Ayomikun</span>
           </motion.div>
-        </motion.div>
-      </div>
-      <div className="about-footer" ref={ref}>
-        <motion.span variants={titleVariants} animate={animation}>
-          Project
-        </motion.span>
-        <motion.img
-          variants={gridRightVariants}
-          animate={animation}
-          src={LeftArrowYellow}
-          alt=""
-        />
-      </div>
-    </motion.div>
+
+          <motion.div className=" grid-center" variants={imageVariants}>
+            <img src={Blaq} alt="Blaq" className="blaq-img" />
+          </motion.div>
+
+          <motion.div className=" grid-right" variants={gridRightVariants}>
+            <img src={DownArrowYellow} alt="" />
+            <span className="about-span">
+              I help progressive business create websites and apps that help
+              them bring their idea to life.
+            </span>
+            <motion.div className="about-btn" variants={BtnVariants}>
+              <a href="#footer">
+                <Btn text="Get in touch" className="touch-btn" />
+              </a>
+              <Link to="/Story">
+                <Btn text="My story" className="story-btn" />
+              </Link>
+            </motion.div>
+          </motion.div>
+        </div>
+        <div className="about-footer" ref={ref}>
+          <motion.span variants={titleVariants} animate={animation}>
+            Project
+          </motion.span>
+          <motion.img
+            variants={gridRightVariants}
+            animate={animation}
+            src={LeftArrowYellow}
+            alt=""
+          />
+        </div>
+      </motion.div>
+    </AnimatePresence>
   );
 };
 

@@ -87,7 +87,11 @@ const StoryContent = () => {
         </div>
 
         <motion.div animate={animation} ref={ref} className="more-story">
-          <motion.div className="story-flex-container">
+          <motion.div
+            className="story-flex-container"
+            animate={animation}
+            ref={ref}
+          >
             <motion.div
               variants={imageVariants}
               transition={{

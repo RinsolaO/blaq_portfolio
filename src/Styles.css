@@ -100,7 +100,6 @@ body {
   height: 1.5rem;
   z-index: 1;
   cursor: pointer;
-  transform: translateX("-100%");
 }
 
 .burger span {
@@ -108,6 +107,8 @@ body {
   width: 1.8rem;
   height: 0.25rem;
   border-radius: 20px;
+  transition: all 0.4s;
+  transform-origin: 0.5px;
 }
 
 @media (max-width: 768px) {
@@ -140,6 +141,19 @@ body {
   .nav-bar {
     padding-right: 1rem;
     padding-left: 1rem;
+  }
+
+  .burger.active span:nth-child(1) {
+    transform: rotate(45deg);
+  }
+
+  .burger.active span:nth-child(2) {
+    transform: translateX("100vw");
+    opacity: 0;
+  }
+
+  .burger.active span:nth-child(3) {
+    transform: rotate(-45deg);
   }
 }
 
@@ -550,8 +564,8 @@ a.case-link {
 @media (max-width: 800px) {
   .footer-social-media img,
   .footer-content img {
-    width: 35px;
-    height: 35px;
+    width: 45px;
+    height: 45px;
   }
   .footer-content,
   .footer-title,
@@ -572,10 +586,13 @@ a.case-link {
 }
 
 @media (max-width: 426px) {
-  .footer-social-media img,
   .footer-content img {
     width: 25px;
     height: 25px;
+  }
+  .footer-social-media img {
+    width: 40px;
+    height: 40px;
   }
   .footer-content,
   .footer-title,
